@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="anchorpaneMain" prefHeight="500.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tool.GettingPriorityController">
+   <children>
+      <ImageView fitHeight="507.0" fitWidth="504.0" layoutY="-7.0" pickOnBounds="true">
+         <image>
+            <Image url="@../image2.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="button" layoutX="339.0" layoutY="443.0" onAction="#Add" text="Add" />
+      <Button layoutX="415.0" layoutY="443.0" mnemonicParsing="false" onAction="#changeScene" text="Next" />
+      <GridPane layoutX="73.0" layoutY="203.0" prefHeight="198.0" prefWidth="366.0" style="-fx-background-color: mediumturquoise;" AnchorPane.bottomAnchor="99.0" AnchorPane.leftAnchor="73.0" AnchorPane.rightAnchor="61.0" AnchorPane.topAnchor="203.0">
+         <columnConstraints>
+            <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" maxWidth="165.0" minWidth="10.0" prefWidth="97.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="254.0" minWidth="10.0" prefWidth="254.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="61.0" minHeight="10.0" prefHeight="46.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="60.0" minHeight="10.0" prefHeight="34.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="45.0" minHeight="0.0" prefHeight="29.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label fx:id="label1" alignment="CENTER" minHeight="16" minWidth="69" prefHeight="25.0" prefWidth="100.0" text="Benefit" textFill="#111111" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+               <padding>
+                  <Insets bottom="5.0" right="5.0" top="5.0" />
+               </padding>
+            </Label>
+            <Label fx:id="label2" alignment="CENTER" minHeight="16" minWidth="69" prefHeight="25.0" prefWidth="100.0" text="Penalty" textAlignment="CENTER" textFill="#030303" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+               <padding>
+                  <Insets bottom="5.0" right="5.0" top="5.0" />
+               </padding>
+            </Label>
+            <Label fx:id="label3" alignment="CENTER" minHeight="16" minWidth="69" prefHeight="25.0" prefWidth="100.0" text="Cost" textAlignment="CENTER" textFill="#1e1e1e" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+               <padding>
+                  <Insets bottom="5.0" right="5.0" top="5.0" />
+               </padding>
+            </Label>
+            <Label fx:id="label31" alignment="CENTER" minHeight="16" minWidth="69" prefHeight="25.0" prefWidth="100.0" text="Risk" textAlignment="CENTER" textFill="#171717" GridPane.rowIndex="4">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+               <padding>
+                  <Insets bottom="5.0" right="5.0" top="5.0" />
+               </padding>
+            </Label>
+            <TextField id="benefit" fx:id="benefit" prefHeight="25.0" prefWidth="175.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets right="10.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField id="penalty" fx:id="penalty" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets right="10.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField id="cost" fx:id="cost" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets right="10.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField id="risk" fx:id="risk" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets right="10.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField id="req" fx:id="req" prefHeight="41.0" prefWidth="224.0" GridPane.columnIndex="1">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="10.0" top="10.0" />
+               </padding>
+               <GridPane.margin>
+                  <Insets right="10.0" />
+               </GridPane.margin>
+            </TextField>
+            <Label fx:id="label" alignment="CENTER" contentDisplay="CENTER" minHeight="16" minWidth="69" prefHeight="61.0" prefWidth="128.0" text="Requirement:" textAlignment="CENTER" textFill="#0d0000" textOverrun="CLIP">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font>
+               <padding>
+                  <Insets bottom="10.0" right="5.0" top="5.0" />
+               </padding>
+            </Label>
+         </children>
+         <padding>
+            <Insets bottom="5.0" top="5.0" />
+         </padding>
+      </GridPane>
+      <Text fill="WHITE" layoutX="64.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Requirement Prioritization Model" textAlignment="CENTER" wrappingWidth="372.96875">
+         <font>
+            <Font name="Britannic Bold" size="29.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="67.0" layoutY="167.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter Requirement with the relevant information:" wrappingWidth="365.9999966621399">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>
